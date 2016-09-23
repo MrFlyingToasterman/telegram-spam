@@ -1,0 +1,14 @@
+#! /bin/bash
+
+if ["$1" = ""]
+then
+
+echo "Use telegram-script User \"Message\" number
+
+Also Note: you need telegram-cli installed"
+
+else
+
+(echo "contact_list"; sleep 4; for ((i=1;i<=$3;i+=1)) do echo "msg $1 \"$2\""; sleep 0.05; echo "safe_quit"; done) |telegram-cli
+
+fi
